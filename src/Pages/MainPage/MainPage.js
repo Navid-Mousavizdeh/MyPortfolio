@@ -23,6 +23,8 @@ import Container from '@mui/material/Container'
 import Fab from '@mui/material/Fab'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Zoom from '@mui/material/Zoom'
+import { Card } from '@mui/material'
+import './MainPage.css'
 
 function ScrollTop(props) {
   const { children, window } = props
@@ -154,7 +156,7 @@ function MainPage(props) {
       <Toolbar id='back-to-top-anchor' />
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position='fixed' open={open}>
+        <AppBar position='fixed' open={open} className='AppBar-Glass'>
           <Toolbar>
             <IconButton
               color='inherit'
@@ -255,21 +257,25 @@ function MainPage(props) {
               maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
               aliquam ultrices sagittis orci a.
             </Typography>
-            <Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-              Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-              gravida rutrum quisque non tellus. Convallis convallis tellus id
-              interdum velit laoreet id donec ultrices. Odio morbi quis commodo
-              odio aenean sed adipiscing. Amet nisl suscipit adipiscing bibendum
-              est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-              Metus vulputate eu scelerisque felis imperdiet proin fermentum
-              leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt
-              lobortis feugiat vivamus at augue. At augue eget arcu dictum
-              varius duis at consectetur lorem. Velit sed ullamcorper morbi
-              tincidunt. Lorem donec massa sapien faucibus et molestie ac.
-            </Typography>
+            <Card className='glass'>
+              <Typography paragraph>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Rhoncus dolor purus non enim praesent elementum facilisis leo
+                vel. Risus at ultrices mi tempus imperdiet. Semper risus in
+                hendrerit gravida rutrum quisque non tellus. Convallis convallis
+                tellus id interdum velit laoreet id donec ultrices. Odio morbi
+                quis commodo odio aenean sed adipiscing. Amet nisl suscipit
+                adipiscing bibendum est ultricies integer quis. Cursus euismod
+                quis viverra nibh cras. Metus vulputate eu scelerisque felis
+                imperdiet proin fermentum leo. Mauris commodo quis imperdiet
+                massa tincidunt. Cras tincidunt lobortis feugiat vivamus at
+                augue. At augue eget arcu dictum varius duis at consectetur
+                lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
+                sapien faucibus et molestie ac.
+              </Typography>
+            </Card>
+
             <Typography paragraph>
               Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
               ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
