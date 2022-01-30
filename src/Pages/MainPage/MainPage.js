@@ -25,6 +25,8 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Zoom from '@mui/material/Zoom'
 import { Card } from '@mui/material'
 import './MainPage.css'
+//import components
+import Header from '../../Components/Header/Header'
 
 function ScrollTop(props) {
   const { children, window } = props
@@ -211,7 +213,11 @@ function MainPage(props) {
         </Drawer>
 
         <Container>
-          <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
+          <Box
+            component='main'
+            sx={{ flexGrow: 1, pt: 3, pl: 0, pr: 0, pb: 3 }}
+          >
+            <Header />
             <Typography paragraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.

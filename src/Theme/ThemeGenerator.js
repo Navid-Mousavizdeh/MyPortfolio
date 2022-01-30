@@ -58,6 +58,9 @@ const ThemeGenerator = createTheme({
       fontSize: '1.6rem',
     },
     subtitle1: {
+      fontWeight: 400,
+    },
+    subtitle2: {
       fontWeight: 700,
     },
   },

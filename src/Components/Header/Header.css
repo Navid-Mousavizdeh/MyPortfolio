@@ -1,0 +1,16 @@
+@font-face {
+  font-family: BetterGrade;
+  src: url('../../Theme/Fonts/BetterGrade.ttf');
+}
+
+.NoWrap {
+  word-break: keep-all;
+}
+
+.Cursive-Font {
+  font-family: BetterGrade !important;
+  font-weight: 100 !important;
+  filter: opacity(0.4);
+  color: #fdd835 !important;
+  z-index: 1 !important;
+}
