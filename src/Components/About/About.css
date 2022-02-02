@@ -1,0 +1,17 @@
+.Glass-Card {
+  background: rgba(3, 155, 229, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(27, 33, 112, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.Glass-Card-Yellow {
+  background: rgba(253, 216, 53, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
