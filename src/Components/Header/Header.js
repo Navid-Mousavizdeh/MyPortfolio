@@ -70,11 +70,15 @@ function Header(props) {
         item
         xs={12}
         sm={6}
-        md={8}
+        md={7}
         justifyContent='center'
         alignItems='center'
-        sx={{ display: { xs: 'none', sd: 'flex' } }}
-      ></Grid>
+        sx={{ display: { xs: 'none', sm: 'flex' } }}
+      >
+        <Grid container item>
+          <img src='MyProfile.png' className='Main-Image' />
+        </Grid>
+      </Grid>
     </Grid>
   )
 }
