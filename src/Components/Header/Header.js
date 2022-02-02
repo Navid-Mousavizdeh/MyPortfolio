@@ -10,7 +10,7 @@ function Header(props) {
   const ReduceFontSize = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
-    <Grid container sx={{ height: '100vh' }} alignItems='center'>
+    <Grid container sx={{ height: '550px' }} alignItems='center'>
       {/*Above Image for Mobile Header*/}
       <Grid
         item

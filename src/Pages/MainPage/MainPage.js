@@ -1,5 +1,6 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
+import Grid from '@mui/material/Grid'
 import { styled, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import MuiDrawer from '@mui/material/Drawer'
@@ -27,6 +28,10 @@ import { Card } from '@mui/material'
 import './MainPage.css'
 //import components
 import Header from '../../Components/Header/Header'
+import CommentBar from '../../Components/CommentBar/CommentBar'
+import ClassTree from '../../Components/ClassTree/ClassTree'
+import MyTimeline from '../../Components/TimeLine/TimeLine'
+import About from '../../Components/About/About'
 
 function ScrollTop(props) {
   const { children, window } = props
@@ -218,6 +223,18 @@ function MainPage(props) {
             sx={{ flexGrow: 1, pt: 3, pl: 0, pr: 0, pb: 3 }}
           >
             <Header />
+            <CommentBar Text={'Who am I?'} />
+            <Grid container justifyContent='center'>
+              <ClassTree />
+            </Grid>
+
+            <Grid container justifyContent='center' sx={{ mt: 4, mb: 7 }}>
+              <About />
+            </Grid>
+            <Grid container justifyContent='center'>
+              <MyTimeline />
+            </Grid>
+
             <Typography paragraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.

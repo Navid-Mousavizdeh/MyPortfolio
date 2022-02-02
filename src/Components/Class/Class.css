@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Vazir;
+  src: url('../../Theme/Fonts/Vazir.ttf');
+}
+
+.Glass-Title {
+  background: rgba(3, 155, 229, 0.65) !important;
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.37) !important;
+  backdrop-filter: blur(5.5px) !important;
+  -webkit-backdrop-filter: blur(5.5px) !important;
+}
+
+.ListItem-Text {
+  font-family: Inconsolata !important;
+  font-weight: 200 !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  color: #b3e5fc !important;
+}
+
+.Farsi-Text {
+  font-family: Vazir !important;
+  font-weight: 200 !important;
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important;
+  color: #b3e5fc !important;
+}
+
+.Wrap-Text {
+  word-break: normal !important;
+}
+
+.TreeChart-twig-5 {
+  white-space: normal !important;
+}

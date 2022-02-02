@@ -1,0 +1,9 @@
+.Color-Comment {
+  color: #388e3c !important;
+}
+
+.Comment-BackGround {
+  background: rgba(3, 155, 229, 0.2) !important;
+  box-shadow: 0 1px 4px 0 rgba(29, 29, 31, 0.17) !important;
+  border-radius: 5px;
+}
