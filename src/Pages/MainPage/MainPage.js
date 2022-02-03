@@ -32,6 +32,7 @@ import CommentBar from '../../Components/CommentBar/CommentBar'
 import ClassTree from '../../Components/ClassTree/ClassTree'
 import MyTimeline from '../../Components/TimeLine/TimeLine'
 import About from '../../Components/About/About'
+import SkillTab from '../../Components/SkillTab/SkillTab'
 
 function ScrollTop(props) {
   const { children, window } = props
@@ -234,8 +235,12 @@ function MainPage(props) {
             <Grid container justifyContent='center'>
               <MyTimeline />
             </Grid>
+            <CommentBar Text={'What are my skills?'} />
+            <Grid container justifyContent='center'>
+              <SkillTab />
+            </Grid>
 
-            <Typography paragraph>
+            {/*<Typography paragraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
@@ -403,7 +408,7 @@ function MainPage(props) {
               aenean euismod elementum nisi quis eleifend. Commodo viverra
               maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
               aliquam ultrices sagittis orci a.
-            </Typography>
+            </Typography> */}
           </Box>
         </Container>
         <ScrollTop {...props}>
