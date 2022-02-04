@@ -154,7 +154,7 @@ function WorkCard(props) {
               sx={{ minWidth: '400px' }}
               display={open ? 'flex' : 'none'}
             >
-              <img src={props.src} />
+              <img src={props.Src} class='Dialog-Image' />
             </Grid>
           )}
         </DialogContent>

@@ -10,6 +10,7 @@ import Box from '@mui/material/Box'
 import SoftwareEngineering from '../SoftwareEngineering/SoftwareEngineering'
 import FrontEnd from '../FrontEnd/FrontEnd'
 import BackEnd from '../BackEnd/BackEnd'
+import GraphicDesign from '../GraphicDesign/GraphicDesign'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -88,7 +89,7 @@ export default function SkillTab() {
           <BackEnd />
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
-          Item Four
+          <GraphicDesign />
         </TabPanel>
       </SwipeableViews>
     </Box>
