@@ -213,7 +213,8 @@ function MainPage(props) {
       </Grid>
       <Grid
         container
-        sx={{ display: { xs: 'none', md: 'flex', width: '100vw' } }}
+        sx={{ display: { xs: 'none', md: 'block' }, mx: 0 }}
+        justifyContent='center'
       >
         <Toolbar id='back-to-top-anchor' />
         <Box sx={{ display: 'flex' }}>
@@ -340,6 +341,7 @@ function MainPage(props) {
               size='small'
               aria-label='scroll back to top'
               onClick={() => HeaderScroll()}
+              style={{ zIndex: '2' }}
             >
               <KeyboardArrowUpIcon />
             </Fab>
