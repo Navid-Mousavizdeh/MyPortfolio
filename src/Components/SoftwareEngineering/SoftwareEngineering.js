@@ -109,7 +109,7 @@ const SoftwareEngineering = () => {
                   Git
                 </Typography>
                 <Box sx={{ flexGrow: 1 }}>
-                  <BorderLinearProgress variant='determinate' value={80} />
+                  <BorderLinearProgress variant='determinate' value={50} />
                 </Box>
               </Grid>
               <Grid
@@ -232,6 +232,14 @@ const SoftwareEngineering = () => {
       </Grid>
       <Grid item xs={12} md={8} sx={{ pl: 3 }}>
         <WorkCard
+          BackgroundImage='KadooBackground.png'
+          Title='Kadoo Shop'
+          Body={`Kadoo is a online shop store designed particularly for plant and plant caring tools. It's developed for Design and analysis of systems course in Iran university of science and technology. As I attend to both front-end and back-end teams, Back-end developed with Python Django and front-end with Material UI and React framework.`}
+          Chips='Python|Django|React|MUI|Swagger'
+          DialogTitle='Kadoo Shop Test Video'
+          Src='Kadoo Preview 480.mp4'
+        />
+        <WorkCard
           BackgroundImage='LibraryBackGround.png'
           Title='Rayo Library'
           Body='Rayo Library is a system that is designed for library management in both member and admin sides. This project was done for Advanced programming course with C# and WPF.'
@@ -239,6 +247,15 @@ const SoftwareEngineering = () => {
           DialogTitle='Rayo Library Test Video'
           Src='Library.mp4'
         />
+        <WorkCard
+          BackgroundImage='YaldaBackground.png'
+          Title='Yalda Site'
+          Body='This site is developed as a sample landing page of an online shop for Yalda Night. This project is developed with HTML and pure CSS only with JS and Simple PHP on back-end.'
+          Chips='HTML|CSS|JS|PHP|MySQL'
+          DialogTitle='Yalda Test Video'
+          Src='Yalda.mp4'
+        />
+
         <WorkCard
           BackgroundImage='FroggerBackground.png'
           Title='Frogger Game'
@@ -248,6 +265,22 @@ const SoftwareEngineering = () => {
           Chips='C++|SFML|OOP'
           DialogTitle='Frogger Test Video'
           Src='Frogger.mp4'
+        />
+        <WorkCard
+          BackgroundImage='ReshteBackground.png'
+          Title='Konkor Major Selection'
+          Body={`This project was done for my highschool consultant with Excel platform and VBA. winch import a dataset of user's interests, city, name and generates appropriate result of Konkor majors according to interests, distance, univercity level and ...`}
+          Chips='Excel|VBA'
+          DialogTitle='Konkor Major Selection'
+          Src='Entekhab Reshte.mp4'
+        />
+        <WorkCard
+          BackgroundImage='APPBackground.jpg'
+          Title='Truth or Dare Android Game'
+          Body='This android game was one of first digital versions of truth or dare game on Cafe Bazaar platform. It was developed with B4a and reach 10.000 download with score of 4.6 among over 10.000 votes.'
+          Chips='Android|B4A|Sqlite'
+          DialogTitle='Android Test Video'
+          Src='App.mp4'
         />
       </Grid>
     </Grid>
