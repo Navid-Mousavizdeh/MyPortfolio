@@ -270,6 +270,8 @@ const SoftwareEngineering = () => {
           BackgroundImage='APPBackground.jpg'
           Title='Truth or Dare Android Game'
           Body='This android game was one of first digital versions of truth or dare game on Cafe Bazaar platform. It was developed with B4a and reach 10.000 download with score of 4.6 among over 10.000 votes.'
+          LinkAddress='https://cafebazaar.ir/app/jorat.haghighat'
+          LinkText='Cafe Bazaar'
           Chips='Android|B4A|Sqlite'
           DialogTitle='Android Test Video'
           Src='App.mp4'

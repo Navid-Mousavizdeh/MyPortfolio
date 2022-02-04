@@ -112,6 +112,11 @@ function WorkCard(props) {
 
             <Grid item>
               <Typography variant='body'>{props.Body}</Typography>
+              <Typography variant='body'>
+                <a href={props.LinkAddress} target='_blank' class='Link-Text'>
+                  {props.LinkText}
+                </a>
+              </Typography>
             </Grid>
 
             <Grid item container direction='row' sx={{ py: 1 }}>
