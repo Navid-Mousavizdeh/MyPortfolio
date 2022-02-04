@@ -179,7 +179,7 @@ function MainPage(props) {
               <MenuIcon />
             </IconButton>
             <Typography variant='h6' noWrap component='div'>
-              Mini variant drawer
+              Navid Mousavizadeh
             </Typography>
           </Toolbar>
         </AppBar>
@@ -229,7 +229,7 @@ function MainPage(props) {
               <ClassTree />
             </Grid>
 
-            <Grid container justifyContent='center' sx={{ mt: 4, mb: 7 }}>
+            <Grid container justifyContent='center' sx={{ mt: 4, mb: 9 }}>
               <About />
             </Grid>
             <Grid container justifyContent='center'>

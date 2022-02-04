@@ -37,50 +37,30 @@ export default function MyTimeline() {
               sx={{ m: 'auto 0' }}
               align='right'
               variant='body2'
-              color='secondary'
-            >
-              1400/10
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot color='secondary'>
-                <LanguageIcon />
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography variant='h6' component='span'>
-                Develop Kadoo project
-              </Typography>
-              <Typography component='div'>
-                Develop an e-commerce and online plant caring <br /> system for
-                DAS course
-              </Typography>
-            </TimelineContent>
-          </TimelineItem>
-          <TimelineItem>
-            <TimelineOppositeContent
-              sx={{ m: 'auto 0' }}
-              variant='body2'
               color='text.secondary'
             >
-              1400/5
+              1398/3
             </TimelineOppositeContent>
+
             <TimelineSeparator>
               <TimelineConnector />
               <TimelineDot color='primary'>
-                <LaptopMacIcon />
+                <SchoolIcon />
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography variant='h6' component='span'>
-                Course project
-              </Typography>
-              <Typography>
-                Develop a desktop library management <br />
-                application in C# and XAML
-              </Typography>
+              <Grid container direction='column' justifyContent='flex-end'>
+                <Grid item justifyContent='flex-start'>
+                  <Typography variant='h6'>High school graduation</Typography>
+                </Grid>
+                <Grid item justifyContent='flex-start'>
+                  <Typography>Mandegar Alborz high school</Typography>
+                </Grid>
+                <Grid item justifyContent='flex-start'>
+                  <Typography>Math major with 19.81 grade</Typography>
+                </Grid>
+              </Grid>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
@@ -90,44 +70,43 @@ export default function MyTimeline() {
               variant='body2'
               color='secondary'
             >
-              1400/1
+              1398/7
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector />
               <TimelineDot color='secondary'>
-                <BusinessIcon />
+                <CardMembershipIcon />
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
               <Typography variant='h6' component='span'>
-                Hired in Sabanet company
+                Admission in university
               </Typography>
-              <Typography component='div'>
-                Graphic designer and content specialist
-              </Typography>
+              <Typography>Iran University of Science and Technology</Typography>
             </TimelineContent>
           </TimelineItem>
+
           <TimelineItem>
             <TimelineOppositeContent
               sx={{ m: 'auto 0' }}
               variant='body2'
               color='text.secondary'
             >
-              1399/10
+              1398/8
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector />
               <TimelineDot color='primary'>
-                <EmojiEventsIcon />
+                <BrushIcon />
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
               <Typography variant='h6' component='span'>
-                Top students celebration
+                Graphic design freelancing
               </Typography>
-              <Typography>Second highest average in school</Typography>
+              <Typography>Start logo design concepts</Typography>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
@@ -167,20 +146,20 @@ export default function MyTimeline() {
               variant='body2'
               color='text.secondary'
             >
-              1398/8
+              1399/10
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector />
               <TimelineDot color='primary'>
-                <BrushIcon />
+                <EmojiEventsIcon />
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
               <Typography variant='h6' component='span'>
-                Graphic design freelancing
+                Top students celebration
               </Typography>
-              <Typography>Start logo design concepts</Typography>
+              <Typography>Second highest average in school</Typography>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
@@ -190,20 +169,47 @@ export default function MyTimeline() {
               variant='body2'
               color='secondary'
             >
-              1398/7
+              1400/1
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector />
               <TimelineDot color='secondary'>
-                <CardMembershipIcon />
+                <BusinessIcon />
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
               <Typography variant='h6' component='span'>
-                Admission in university
+                Hired in Sabanet company
               </Typography>
-              <Typography>Iran University of Science and Technology</Typography>
+              <Typography component='div'>
+                Graphic designer and content specialist
+              </Typography>
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: 'auto 0' }}
+              variant='body2'
+              color='text.secondary'
+            >
+              1400/5
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot color='primary'>
+                <LaptopMacIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: '12px', px: 2 }}>
+              <Typography variant='h6' component='span'>
+                Course project
+              </Typography>
+              <Typography>
+                Develop a desktop library management <br />
+                application in C# and XAML
+              </Typography>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
@@ -211,30 +217,25 @@ export default function MyTimeline() {
               sx={{ m: 'auto 0' }}
               align='right'
               variant='body2'
-              color='text.secondary'
+              color='secondary'
             >
-              1398/3
+              1400/10
             </TimelineOppositeContent>
-
             <TimelineSeparator>
               <TimelineConnector />
-              <TimelineDot color='primary'>
-                <SchoolIcon />
+              <TimelineDot color='secondary'>
+                <LanguageIcon />
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Grid container direction='column' justifyContent='flex-end'>
-                <Grid item justifyContent='flex-start'>
-                  <Typography variant='h6'>High school graduation</Typography>
-                </Grid>
-                <Grid item justifyContent='flex-start'>
-                  <Typography>Mandegar Alborz high school</Typography>
-                </Grid>
-                <Grid item justifyContent='flex-start'>
-                  <Typography>Math major with 19.81 grade</Typography>
-                </Grid>
-              </Grid>
+              <Typography variant='h6' component='span'>
+                Develop Kadoo project
+              </Typography>
+              <Typography component='div'>
+                Develop an e-commerce and online plant caring <br /> system for
+                DAS course
+              </Typography>
             </TimelineContent>
           </TimelineItem>
         </Timeline>

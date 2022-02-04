@@ -12,7 +12,11 @@ const About = () => {
         sx={{ height: '120%' }}
         justifyContent='flex-start'
       >
-        <Card sx={{ height: '100%', width: '150%' }}>dsff</Card>
+        <Card sx={{ height: '100%', width: '150%' }}>
+          <Grid item sx={{ height: '100%', width: '56%' }}>
+            <img src='MyProfile.png' className='Main-Image' />
+          </Grid>
+        </Card>
       </Grid>
       <Grid item xs={12} md={8}>
         <Card sx={{ p: 2, ml: -4 }} className='Glass-Card-Yellow'>
