@@ -63,7 +63,7 @@ function WorkCard(props) {
   }
 
   React.useEffect(() => {
-    if (open) {
+    if (open && !props.image) {
       console.log(111)
       setTimeout(() => {
         var mp = new MuiPlayer({
@@ -140,13 +140,23 @@ function WorkCard(props) {
           {props.DialogTitle}
         </BootstrapDialogTitle>
         <DialogContent dividers>
-          {' '}
-          <Grid
-            container
-            sx={{ minWidth: '400px' }}
-            id='mui-player'
-            display={open ? 'flex' : 'none'}
-          ></Grid>
+          {!props.image && (
+            <Grid
+              container
+              sx={{ minWidth: '400px' }}
+              id='mui-player'
+              display={open ? 'flex' : 'none'}
+            ></Grid>
+          )}
+          {props.image && (
+            <Grid
+              container
+              sx={{ minWidth: '400px' }}
+              display={open ? 'flex' : 'none'}
+            >
+              <img src={props.src} />
+            </Grid>
+          )}
         </DialogContent>
       </BootstrapDialog>
     </Grid>
