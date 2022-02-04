@@ -11,6 +11,7 @@ import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import 'mui-player/dist/mui-player.min.css'
 import MuiPlayer from 'mui-player'
+import PlayCircleIcon from '@mui/icons-material/PlayCircle'
 
 import './WorkCard.css'
 
@@ -81,24 +82,35 @@ function WorkCard(props) {
   return (
     <Grid container sx={{ height: '250px' }} alignItems='center' sx={{ mb: 2 }}>
       <Grid item xs={4} sx={{ height: '100%' }}>
-        <Card sx={{ height: '100%', p: 1 }} className='Image-Container'>
-          <Grid
-            container
-            item
-            justifyContent='center'
-            alignItems='center'
-            className='Container-Image'
-            sx={{ height: '100%' }}
-          >
-            <Button
-              variant='text'
-              onClick={handleClickOpen}
-              className='Correct-Button-padding'
+        <Button
+          variant='text'
+          onClick={handleClickOpen}
+          className='Correct-Button-padding'
+          sx={{ width: '100%' }}
+        >
+          <Card sx={{ height: '100%', p: 1 }} className='Image-Container'>
+            <Grid
+              container
+              item
+              justifyContent='center'
+              alignItems='center'
+              className='Container-Image'
+              sx={{ height: '100%' }}
             >
-              <img src={props.BackgroundImage} class='Card-Image' />
-            </Button>
-          </Grid>
-        </Card>
+              <Grid container direction='column'>
+                <Grid container item justifyContent='center'>
+                  <img src={props.BackgroundImage} class='Card-Image' />
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid container item justifyContent='center' sx={{ mt: 0 }}>
+              <PlayCircleIcon
+                sx={{ width: '32px', height: '32px', mt: 1 }}
+                style={{ color: 'gray', zIndex: '1' }}
+              />
+            </Grid>
+          </Card>
+        </Button>
       </Grid>
       <Grid item xs={8} sx={{ height: '90%', ml: -2 }}>
         <Card sx={{ height: '100%', boxShadow: 3 }}>

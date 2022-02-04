@@ -204,13 +204,17 @@ function MainPage(props) {
       <Grid
         sx={{ display: { xs: 'flex', md: 'none' } }}
         justifyContent='center'
+        container
       >
         <Alert severity='error' sx={{ my: 3, mx: 2 }}>
           Responsive version is under construction! Please come back with a pc
           ...
         </Alert>
       </Grid>
-      <Grid sx={{ display: { xs: 'none', md: 'flex' } }}>
+      <Grid
+        container
+        sx={{ display: { xs: 'none', md: 'flex', width: '100vw' } }}
+      >
         <Toolbar id='back-to-top-anchor' />
         <Box sx={{ display: 'flex' }}>
           <CssBaseline />
