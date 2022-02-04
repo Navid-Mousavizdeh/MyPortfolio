@@ -1,5 +1,6 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
+import Alert from '@mui/material/Alert'
 import Grid from '@mui/material/Grid'
 import { styled, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
@@ -200,6 +201,15 @@ function MainPage(props) {
 
   return (
     <React.Fragment>
+      <Grid
+        sx={{ display: { xs: 'flex', md: 'none' } }}
+        justifyContent='center'
+      >
+        <Alert severity='error' sx={{ my: 3, mx: 2 }}>
+          Responsive version is under construction! Please come back with a pc
+          ...
+        </Alert>
+      </Grid>
       <Grid sx={{ display: { xs: 'none', md: 'flex' } }}>
         <Toolbar id='back-to-top-anchor' />
         <Box sx={{ display: 'flex' }}>
