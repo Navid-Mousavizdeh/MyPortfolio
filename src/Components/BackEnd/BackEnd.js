@@ -8,7 +8,7 @@ import CircularProgress, {
 import LinearProgress, {
   linearProgressClasses,
 } from '@mui/material/LinearProgress'
-import './SoftwareEngineering.css'
+import './BackEnd.css'
 import WorkCard from '../WorkCard/WorkCard'
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
@@ -23,7 +23,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }))
 
-const SoftwareEngineering = () => {
+const BackEnd = () => {
   return (
     <Grid container alignItems='stretch'>
       <Grid item xs={12} md={4} justifyContent='flex-start'>
@@ -37,9 +37,7 @@ const SoftwareEngineering = () => {
               alignItems='center'
               className='Glass-Title-Yellow'
             >
-              <Typography variant='h6'>
-                My software engineering skills
-              </Typography>
+              <Typography variant='h6'>My Back-end skills</Typography>
             </Grid>
             <Grid container item sx={{ mb: 1 }}>
               <Grid
@@ -50,7 +48,7 @@ const SoftwareEngineering = () => {
                 sx={{ mx: 1, mt: 1 }}
               >
                 <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  Problem Solving
+                  Python
                 </Typography>
                 <Box sx={{ flexGrow: 1 }}>
                   <BorderLinearProgress variant='determinate' value={60} />
@@ -64,12 +62,55 @@ const SoftwareEngineering = () => {
                 sx={{ mx: 1, mt: 1 }}
               >
                 <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  Algorithm
+                  Django
+                </Typography>
+                <Box sx={{ flexGrow: 1 }}>
+                  <BorderLinearProgress variant='determinate' value={70} />
+                </Box>
+              </Grid>
+              <Grid
+                container
+                item
+                direction='row'
+                alignItems='center'
+                sx={{ mx: 1, mt: 1 }}
+              >
+                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
+                  REST framework
+                </Typography>
+                <Box sx={{ flexGrow: 1 }}>
+                  <BorderLinearProgress variant='determinate' value={60} />
+                </Box>
+              </Grid>
+              <Grid
+                container
+                item
+                direction='row'
+                alignItems='center'
+                sx={{ mx: 1, mt: 1 }}
+              >
+                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
+                  PHP
+                </Typography>
+                <Box sx={{ flexGrow: 1 }}>
+                  <BorderLinearProgress variant='determinate' value={35} />
+                </Box>
+              </Grid>
+              <Grid
+                container
+                item
+                direction='row'
+                alignItems='center'
+                sx={{ mx: 1, mt: 1 }}
+              >
+                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
+                  SQL and Database
                 </Typography>
                 <Box sx={{ flexGrow: 1 }}>
                   <BorderLinearProgress variant='determinate' value={40} />
                 </Box>
               </Grid>
+              <Divider sx={{ width: '100%', my: 0.5 }} />
               <Grid
                 container
                 item
@@ -78,10 +119,10 @@ const SoftwareEngineering = () => {
                 sx={{ mx: 1, mt: 1 }}
               >
                 <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  Data Structure
+                  JWT
                 </Typography>
                 <Box sx={{ flexGrow: 1 }}>
-                  <BorderLinearProgress variant='determinate' value={80} />
+                  <BorderLinearProgress variant='determinate' value={70} />
                 </Box>
               </Grid>
               <Grid
@@ -92,21 +133,7 @@ const SoftwareEngineering = () => {
                 sx={{ mx: 1, mt: 1 }}
               >
                 <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  Database
-                </Typography>
-                <Box sx={{ flexGrow: 1 }}>
-                  <BorderLinearProgress variant='determinate' value={40} />
-                </Box>
-              </Grid>
-              <Grid
-                container
-                item
-                direction='row'
-                alignItems='center'
-                sx={{ mx: 1, mt: 1 }}
-              >
-                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  Git
+                  Swagger
                 </Typography>
                 <Box sx={{ flexGrow: 1 }}>
                   <BorderLinearProgress variant='determinate' value={50} />
@@ -120,107 +147,7 @@ const SoftwareEngineering = () => {
                 sx={{ mx: 1, mt: 1 }}
               >
                 <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  UML Diagrams
-                </Typography>
-                <Box sx={{ flexGrow: 1 }}>
-                  <BorderLinearProgress variant='determinate' value={80} />
-                </Box>
-              </Grid>
-              <Grid
-                container
-                item
-                direction='row'
-                alignItems='center'
-                sx={{ mx: 1, mt: 1 }}
-              >
-                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  Agile Methodologies
-                </Typography>
-                <Box sx={{ flexGrow: 1 }}>
-                  <BorderLinearProgress variant='determinate' value={60} />
-                </Box>
-              </Grid>
-              <Divider sx={{ width: '100%', my: 0.5 }} />
-              <Grid
-                container
-                item
-                direction='row'
-                alignItems='center'
-                sx={{ mx: 1, mt: 1 }}
-              >
-                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  C
-                </Typography>
-                <Box sx={{ flexGrow: 1 }}>
-                  <BorderLinearProgress variant='determinate' value={80} />
-                </Box>
-              </Grid>
-              <Grid
-                container
-                item
-                direction='row'
-                alignItems='center'
-                sx={{ mx: 1, mt: 1 }}
-              >
-                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  C++
-                </Typography>
-                <Box sx={{ flexGrow: 1 }}>
-                  <BorderLinearProgress variant='determinate' value={85} />
-                </Box>
-              </Grid>
-              <Grid
-                container
-                item
-                direction='row'
-                alignItems='center'
-                sx={{ mx: 1, mt: 1 }}
-              >
-                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  C#
-                </Typography>
-                <Box sx={{ flexGrow: 1 }}>
-                  <BorderLinearProgress variant='determinate' value={95} />
-                </Box>
-              </Grid>
-              <Grid
-                container
-                item
-                direction='row'
-                alignItems='center'
-                sx={{ mx: 1, mt: 1 }}
-              >
-                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  Python
-                </Typography>
-                <Box sx={{ flexGrow: 1 }}>
-                  <BorderLinearProgress variant='determinate' value={65} />
-                </Box>
-              </Grid>
-
-              <Grid
-                container
-                item
-                direction='row'
-                alignItems='center'
-                sx={{ mx: 1, mt: 1 }}
-              >
-                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  Basic (VB,B4A)
-                </Typography>
-                <Box sx={{ flexGrow: 1 }}>
-                  <BorderLinearProgress variant='determinate' value={90} />
-                </Box>
-              </Grid>
-              <Grid
-                container
-                item
-                direction='row'
-                alignItems='center'
-                sx={{ mx: 1, mt: 1 }}
-              >
-                <Typography sx={{ mr: 1 }} sx={{ width: '150px' }}>
-                  Java
+                  Docker
                 </Typography>
                 <Box sx={{ flexGrow: 1 }}>
                   <BorderLinearProgress variant='determinate' value={20} />
@@ -240,43 +167,16 @@ const SoftwareEngineering = () => {
           Src='Kadoo Preview 480.mp4'
         />
         <WorkCard
-          BackgroundImage='LibraryBackGround.png'
-          Title='Rayo Library'
-          Body='Rayo Library is a system that is designed for library management in both member and admin sides. This project was done for Advanced programming course with C# and WPF.'
-          Chips='C#|WPF|XAML|Database|Sql server'
-          DialogTitle='Rayo Library Test Video'
-          Src='Library.mp4'
-        />
-
-        <WorkCard
-          BackgroundImage='FroggerBackground.png'
-          Title='Frogger Game'
-          Body='Frogger is a 1981 arcade action game developed by Konami and
-                manufactured by Sega. Sample version of this game is developed
-                with C++ and SFML library by me for programming course.'
-          Chips='C++|SFML|OOP'
-          DialogTitle='Frogger Test Video'
-          Src='Frogger.mp4'
-        />
-        <WorkCard
-          BackgroundImage='ReshteBackground.png'
-          Title='Konkor Major Selection'
-          Body={`This project was done for my highschool consultant with Excel platform and VBA. winch import a dataset of user's interests, city, name and generates appropriate result of Konkor majors according to interests, distance, univercity level and ...`}
-          Chips='Excel|VBA'
-          DialogTitle='Konkor Major Selection'
-          Src='Entekhab Reshte.mp4'
-        />
-        <WorkCard
-          BackgroundImage='APPBackground.jpg'
-          Title='Truth or Dare Android Game'
-          Body='This android game was one of first digital versions of truth or dare game on Cafe Bazaar platform. It was developed with B4a and reach 10.000 download with score of 4.6 among over 10.000 votes.'
-          Chips='Android|B4A|Sqlite'
-          DialogTitle='Android Test Video'
-          Src='App.mp4'
+          BackgroundImage='YaldaBackground.png'
+          Title='Yalda Site'
+          Body='This site is developed as a sample landing page of an online shop for Yalda Night. This project is developed with HTML and pure CSS only with JS and Simple PHP on back-end.'
+          Chips='HTML|CSS|JS|PHP|MySQL'
+          DialogTitle='Yalda Test Video'
+          Src='Yalda.mp4'
         />
       </Grid>
     </Grid>
   )
 }
 
-export default SoftwareEngineering
+export default BackEnd
