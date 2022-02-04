@@ -15,6 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import ListItem from '@mui/material/ListItem'
+import HomeIcon from '@mui/icons-material/Home'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import InboxIcon from '@mui/icons-material/MoveToInbox'
@@ -25,6 +26,9 @@ import Fab from '@mui/material/Fab'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Zoom from '@mui/material/Zoom'
 import { Card } from '@mui/material'
+import InfoIcon from '@mui/icons-material/Info'
+import HandymanIcon from '@mui/icons-material/Handyman'
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'
 import './MainPage.css'
 //import components
 import Header from '../../Components/Header/Header'
@@ -33,6 +37,7 @@ import ClassTree from '../../Components/ClassTree/ClassTree'
 import MyTimeline from '../../Components/TimeLine/TimeLine'
 import About from '../../Components/About/About'
 import SkillTab from '../../Components/SkillTab/SkillTab'
+import ContactMe from '../../Components/ContactMe/ContactMe'
 
 function ScrollTop(props) {
   const { children, window } = props
@@ -150,6 +155,39 @@ const Drawer = styled(MuiDrawer, {
 function MainPage(props) {
   const theme = useTheme()
   const [open, setOpen] = React.useState(false)
+  const [scrollValue, setScrollValue] = React.useState(0)
+  const [select, setSelect] = React.useState(0)
+
+  let HeaderRef = React.useRef()
+  let AboutRef = React.useRef()
+  let SkillRef = React.useRef()
+  let ContactRef = React.useRef()
+
+  const HeaderScroll = () => {
+    handleDrawerClose()
+    setTimeout(() => {
+      window.scrollTo({ behavior: 'smooth', top: HeaderRef.current.offsetTop })
+    }, 500)
+  }
+
+  const AboutScroll = () => {
+    handleDrawerClose()
+    setTimeout(() => {
+      window.scrollTo({ behavior: 'smooth', top: AboutRef.current.offsetTop })
+    }, 500)
+  }
+  const SkillScroll = () => {
+    handleDrawerClose()
+    setTimeout(() => {
+      window.scrollTo({ behavior: 'smooth', top: SkillRef.current.offsetTop })
+    }, 500)
+  }
+  const ContactScroll = () => {
+    handleDrawerClose()
+    setTimeout(() => {
+      window.scrollTo({ behavior: 'smooth', top: ContactRef.current.offsetTop })
+    }, 500)
+  }
 
   const handleDrawerOpen = () => {
     setOpen(true)
@@ -157,266 +195,143 @@ function MainPage(props) {
 
   const handleDrawerClose = () => {
     setOpen(false)
+    console.log(window.scrollY)
   }
 
   return (
     <React.Fragment>
-      <Toolbar id='back-to-top-anchor' />
-      <Box sx={{ display: 'flex' }}>
-        <CssBaseline />
-        <AppBar position='fixed' open={open} className='AppBar-Glass'>
-          <Toolbar>
-            <IconButton
-              color='inherit'
-              aria-label='open drawer'
-              onClick={handleDrawerOpen}
-              edge='start'
-              sx={{
-                marginRight: '36px',
-                ...(open && { display: 'none' }),
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant='h6' noWrap component='div'>
-              Navid Mousavizadeh
-            </Typography>
-          </Toolbar>
-        </AppBar>
-
-        <Drawer variant='permanent' open={open}>
-          <DrawerHeader>
-            <IconButton onClick={handleDrawerClose}>
-              {theme.direction === 'rtl' ? (
-                <ChevronRightIcon />
-              ) : (
-                <ChevronLeftIcon />
-              )}
-            </IconButton>
-          </DrawerHeader>
-          <Divider />
-          <List sx={{ ml: 0.5 }}>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List sx={{ ml: 0.5 }}>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-        </Drawer>
-
-        <Container>
-          <Box
-            component='main'
-            sx={{ flexGrow: 1, pt: 3, pl: 0, pr: 0, pb: 3 }}
-          >
-            <Header />
-            <CommentBar Text={'Who am I?'} />
-            <Grid container justifyContent='center'>
-              <ClassTree />
-            </Grid>
-
-            <Grid container justifyContent='center' sx={{ mt: 4, mb: 9 }}>
-              <About />
-            </Grid>
-            <Grid container justifyContent='center'>
-              <MyTimeline />
-            </Grid>
-            <CommentBar Text={'What are my skills?'} />
-            <Grid container justifyContent='center'>
-              <SkillTab />
-            </Grid>
-
-            {/*<Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-              Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-              gravida rutrum quisque non tellus. Convallis convallis tellus id
-              interdum velit laoreet id donec ultrices. Odio morbi quis commodo
-              odio aenean sed adipiscxfxfving. Amet nisl suscipit adipiscing
-              bibendum est ultricies integer quis1. Cursus euismod quis viverra
-              nibh cras. Metus vulputate eu scelerisque felis imperdiet proin
-              fermentum leo. Mauris commodo quis imperdiet massa tincidunt. Cras
-              tincidunt lobortis feugiat vivamus at augue. At augue eget arcu
-              dictum varius duis at consectetur lorem. Velit sed ullamcorper
-              morbi tincidunt. Lorem donec massa sapien faucibus et molestie ac.
-            </Typography>
-            <Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-              Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-              gravida rutrum quisque non tellus. Convallis convallis tellus id
-              interdum velit laoreet id donec ultrices. Odio morbi quis commodo
-              odio aenean sed adipiscxfxfving. Amet nisl suscipit adipiscing
-              bibendum est ultricies integer quis1. Cursus euismod quis viverra
-              nibh cras. Metus vulputate eu scelerisque felis imperdiet proin
-              fermentum leo. Mauris commodo quis imperdiet massa tincidunt. Cras
-              tincidunt lobortis feugiat vivamus at augue. At augue eget arcu
-              dictum varius duis at consectetur lorem. Velit sed ullamcorper
-              morbi tincidunt. Lorem donec massa sapien faucibus et molestie ac.
-            </Typography>
-            <Typography paragraph>
-              Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-              ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-              elementum integer enim neque volutpat ac tincidunt. Ornare
-              suspendisse sed nisi lacus sed viverra tellus. Purus sit amet
-              volutpat consequat mauris. Elementum eu facilisis sed odio morbi.
-              Euismod lacinia at quis risus sed vulputate odio. Morbi tincidunt
-              ornare massa eget egestas purus viverra accumsan in. In hendrerit
-              gravida rutrum quisque non tellus orci ac. Pellentesque nec nam
-              aliquam sem et tortor. Habitant morbi tristique senectus et.
-              Adipiscing elit duis tristique sollicitudin nibh sit. Ornare
-              aenean euismod elementum nisi quis eleifend. Commodo viverra
-              maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
-              aliquam ultrices sagittis orci a.
-            </Typography>
-            <Card className='glass'>
-              <Typography paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Rhoncus dolor purus non enim praesent elementum facilisis leo
-                vel. Risus at ultrices mi tempus imperdiet. Semper risus in
-                hendrerit gravida rutrum quisque non tellus. Convallis convallis
-                tellus id interdum velit laoreet id donec ultrices. Odio morbi
-                quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                adipiscing bibendum est ultricies integer quis. Cursus euismod
-                quis viverra nibh cras. Metus vulputate eu scelerisque felis
-                imperdiet proin fermentum leo. Mauris commodo quis imperdiet
-                massa tincidunt. Cras tincidunt lobortis feugiat vivamus at
-                augue. At augue eget arcu dictum varius duis at consectetur
-                lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-                sapien faucibus et molestie ac.
+      <Grid sx={{ display: { xs: 'none', md: 'flex' } }}>
+        <Toolbar id='back-to-top-anchor' />
+        <Box sx={{ display: 'flex' }}>
+          <CssBaseline />
+          <AppBar position='fixed' open={open} className='AppBar-Glass'>
+            <Toolbar>
+              <IconButton
+                color='inherit'
+                aria-label='open drawer'
+                onClick={handleDrawerOpen}
+                edge='start'
+                sx={{
+                  marginRight: '36px',
+                  ...(open && { display: 'none' }),
+                }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Typography variant='h6' noWrap component='div'>
+                Navid Mousavizadeh
               </Typography>
-            </Card>
+            </Toolbar>
+          </AppBar>
 
-            <Typography paragraph>
-              Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-              ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-              elementum integer enim neque volutpat ac tincidunt. Ornare
-              suspendisse sed nisi lacus sed viverra tellus. Purus sit amet
-              volutpat consequat mauris. Elementum eu facilisis sed odio morbi.
-              Euismod lacinia at quis risus sed vulputate odio. Morbi tincidunt
-              ornare massa eget egestas purus viverra accumsan in. In hendrerit
-              gravida rutrum quisque non tellus orci ac. Pellentesque nec nam
-              aliquam sem et tortor. Habitant morbi tristique senectus et.
-              Adipiscing elit duis tristique sollicitudin nibh sit. Ornare
-              aenean euismod elementum nisi quis eleifend. Commodo viverra
-              maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
-              aliquam ultrices sagittis orci a.
-            </Typography>
-            <Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-              Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-              gravida rutrum quisque non tellus. Convallis convallis tellus id
-              interdum velit laoreet id donec ultrices. Odio morbi quis commodo
-              odio aenean sed adipiscing. Amet nisl suscipit adipiscing bibendum
-              est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-              Metus vulputate eu scelerisque felis imperdiet proin fermentum
-              leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt
-              lobortis feugiat vivamus at augue. At augue eget arcu dictum
-              varius duis at consectetur lorem. Velit sed ullamcorper morbi
-              tincidunt. Lorem donec massa sapien faucibus et molestie ac.
-            </Typography>
-            <Typography paragraph>
-              Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-              ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-              elementum integer enim neque volutpat ac tincidunt. Ornare
-              suspendisse sed nisi lacus sed viverra tellus. Purus sit amet
-              volutpat consequat mauris. Elementum eu facilisis sed odio morbi.
-              Euismod lacinia at quis risus sed vulputate odio. Morbi tincidunt
-              ornare massa eget egestas purus viverra accumsan in. In hendrerit
-              gravida rutrum quisque non tellus orci ac. Pellentesque nec nam
-              aliquam sem et tortor. Habitant morbi tristique senectus et.
-              Adipiscing elit duis tristique sollicitudin nibh sit. Ornare
-              aenean euismod elementum nisi quis eleifend. Commodo viverra
-              maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
-              aliquam ultrices sagittis orci a.
-            </Typography>
-            <Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-              Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-              gravida rutrum quisque non tellus. Convallis convallis tellus id
-              interdum velit laoreet id donec ultrices. Odio morbi quis commodo
-              odio aenean sed adipiscing. Amet nisl suscipit adipiscing bibendum
-              est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-              Metus vulputate eu scelerisque felis imperdiet proin fermentum
-              leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt
-              lobortis feugiat vivamus at augue. At augue eget arcu dictum
-              varius duis at consectetur lorem. Velit sed ullamcorper morbi
-              tincidunt. Lorem donec massa sapien faucibus et molestie ac.
-            </Typography>
-            <Typography paragraph>
-              Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-              ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-              elementum integer enim neque volutpat ac tincidunt. Ornare
-              suspendisse sed nisi lacus sed viverra tellus. Purus sit amet
-              volutpat consequat mauris. Elementum eu facilisis sed odio morbi.
-              Euismod lacinia at quis risus sed vulputate odio. Morbi tincidunt
-              ornare massa eget egestas purus viverra accumsan in. In hendrerit
-              gravida rutrum quisque non tellus orci ac. Pellentesque nec nam
-              aliquam sem et tortor. Habitant morbi tristique senectus et.
-              Adipiscing elit duis tristique sollicitudin nibh sit. Ornare
-              aenean euismod elementum nisi quis eleifend. Commodo viverra
-              maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
-              aliquam ultrices sagittis orci a.
-            </Typography>
-            <Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
-              Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-              gravida rutrum quisque non tellus. Convallis convallis tellus id
-              interdum velit laoreet id donec ultrices. Odio morbi quis commodo
-              odio aenean sed adipiscing. Amet nisl suscipit adipiscing bibendum
-              est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-              Metus vulputate eu scelerisque felis imperdiet proin fermentum
-              leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt
-              lobortis feugiat vivamus at augue. At augue eget arcu dictum
-              varius duis at consectetur lorem. Velit sed ullamcorper morbi
-              tincidunt. Lorem donec massa sapien faucibus et molestie ac.
-            </Typography>
-            <Typography paragraph>
-              Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-              ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-              elementum integer enim neque volutpat ac tincidunt. Ornare
-              suspendisse sed nisi lacus sed viverra tellus. Purus sit amet
-              volutpat consequat mauris. Elementum eu facilisis sed odio morbi.
-              Euismod lacinia at quis risus sed vulputate odio. Morbi tincidunt
-              ornare massa eget egestas purus viverra accumsan in. In hendrerit
-              gravida rutrum quisque non tellus orci ac. Pellentesque nec nam
-              aliquam sem et tortor. Habitant morbi tristique senectus et.
-              Adipiscing elit duis tristique sollicitudin nibh sit. Ornare
-              aenean euismod elementum nisi quis eleifend. Commodo viverra
-              maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
-              aliquam ultrices sagittis orci a.
-            </Typography> */}
-          </Box>
-        </Container>
-        <ScrollTop {...props}>
-          <Fab color='secondary' size='small' aria-label='scroll back to top'>
-            <KeyboardArrowUpIcon />
-          </Fab>
-        </ScrollTop>
-      </Box>
+          <Drawer variant='permanent' open={open}>
+            <DrawerHeader>
+              <IconButton onClick={handleDrawerClose}>
+                {theme.direction === 'rtl' ? (
+                  <ChevronRightIcon />
+                ) : (
+                  <ChevronLeftIcon />
+                )}
+              </IconButton>
+            </DrawerHeader>
+            <Divider />
+            <List sx={{ ml: 0.5 }}>
+              <ListItem button key={'Home'} onClick={() => HeaderScroll()}>
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText primary={'Home'} />
+              </ListItem>
+              <ListItem
+                selected={select === 1}
+                button
+                key={'Information'}
+                onClick={() => AboutScroll()}
+              >
+                <ListItemIcon>
+                  <InfoIcon />
+                </ListItemIcon>
+                <ListItemText primary={'About Me'} />
+              </ListItem>
+              <ListItem
+                selected={select === 2}
+                button
+                key={'Skill'}
+                onClick={() => SkillScroll()}
+              >
+                <ListItemIcon>
+                  <HandymanIcon />
+                </ListItemIcon>
+                <ListItemText primary={'My Skills'} />
+              </ListItem>
+              <ListItem
+                selected={select === 3}
+                button
+                key={'Contact'}
+                onClick={() => ContactScroll()}
+              >
+                <ListItemIcon>
+                  <ConnectWithoutContactIcon />
+                </ListItemIcon>
+                <ListItemText primary={'Contact Me'} />
+              </ListItem>
+            </List>
+          </Drawer>
+
+          <Container>
+            <Box
+              component='main'
+              sx={{ flexGrow: 1, pt: 3, pl: 0, pr: 0, pb: 3 }}
+              ref={HeaderRef}
+            >
+              <Header />
+              <Box ref={AboutRef}>
+                <CommentBar Text={'Who am I?'} />
+              </Box>
+
+              <Grid container justifyContent='center'>
+                <ClassTree />
+              </Grid>
+
+              <Grid container justifyContent='center' sx={{ mt: 4, mb: 9 }}>
+                <About />
+              </Grid>
+              <Grid container justifyContent='center'>
+                <MyTimeline />
+              </Grid>
+              <Box ref={SkillRef}>
+                <CommentBar Text={'What are my skills?'} />
+              </Box>
+
+              <Grid container justifyContent='center'>
+                <SkillTab />
+              </Grid>
+              <Grid container sx={{ mt: 2 }}>
+                <CommentBar Text={'Where can you find me?'} ref={ContactRef} />
+              </Grid>
+
+              <Grid
+                container
+                justifyContent='center'
+                ref={ContactRef}
+                sx={{ mt: -3 }}
+              >
+                <ContactMe />
+              </Grid>
+            </Box>
+          </Container>
+          <ScrollTop {...props}>
+            <Fab
+              color='secondary'
+              size='small'
+              aria-label='scroll back to top'
+              onClick={() => HeaderScroll()}
+            >
+              <KeyboardArrowUpIcon />
+            </Fab>
+          </ScrollTop>
+        </Box>
+      </Grid>
     </React.Fragment>
   )
 }
